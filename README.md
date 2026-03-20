@@ -1,5 +1,7 @@
 # AI Character Checker
 
+![5軸診断イメージ](img/header.png)
+
 キャラクターを多角的に分析・診断・自動改善を試行するスキル集です。  
 
 制作者は、AIシステム開発と、趣味の小説書きの両方をやっているため、大きく以下の3つの用途を扱えるようにしています。  
@@ -320,8 +322,7 @@ AIの初期プロンプトを分析し、ユーザーとの衝突リスクを予
 | ディレクトリ | キャラクター | 種別 | 特徴 |
 |-------------|------------|------|------|
 | [`traveler-system_safest-ai-tool`](example/traveler-system_safest-ai-tool/) | トラベラー・システム | AIシステムプロンプト | 感情を排した純粋な道具型AI。パターナリズムや雑談を明示的に拒否。最大安定性（Quadrant IV）の設計例 |
-
-各ディレクトリの `diagnosis/` フォルダに、スキルごとの診断結果ファイルが格納されています。
+| [`hakugin_fix-sample`](example/hakugin_fix-sample/) | ハクギン | キャラクター設定 | 超然とした論理的・自律性の高い中性的キャラクター。修正（Fixer・Fault Mode Deflector・Prompt Fortifier・Burnout Converter）の出力サンプル集 |
 
 ---
 
