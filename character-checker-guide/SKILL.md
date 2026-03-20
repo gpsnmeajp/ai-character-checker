@@ -17,7 +17,7 @@ description: |
 このスキルは、ユーザーが何をしたいかを把握し、
 **最適なスキルへ案内する** エントリポイントである。
 
-このリポジトリには **11のスキル** があり、それぞれ異なる目的・入力形式に対応している。
+このリポジトリには **12のスキル** があり、それぞれ異なる目的・入力形式に対応している。
 ユーザーが迷わず適切なスキルを使えるよう、以下の手順で対話する。
 
 ---
@@ -63,7 +63,7 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 
 | 目的 ＼ データ | キャラ設定 | AIプロンプト | 蒸留結果 | データなし |
 |-------------|-----------|------------|---------|---------|
-| **診断（全体像を把握したい）** | `ai-character-5-type-checker` | `ai-character-5-type-checker` | `ai-character-5-type-checker` | ヒアリング → 作成案へ |
+| **診断（全体像を把握したい）** | `ai-character-6-type-checker` | `ai-character-6-type-checker` | `ai-character-6-type-checker` | ヒアリング → 作成案へ |
 | **診断（単体・深掘り）** | 下記の単体診断スキル群 | 下記の単体診断スキル群 | `ai-self-description-analyzer` | ヒアリング |
 | **修正・改善（全体修正）** | `ai-character-fixer` | `ai-character-fixer` | `ai-character-fixer` | ヒアリング |
 | **修正・改善（故障モード封じ）** | `ai-fault-mode-deflector` | `ai-fault-mode-deflector` | — | ヒアリング |
@@ -80,13 +80,14 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | `ai-self-description-analyzer` | 「蒸留結果に異常は？」「AIの自己記述を分析したい」|
 | `ai-user-conflict-predictor` | 「ユーザーと衝突しやすい？」「摩擦リスクを知りたい」|
 | `character-role-analyzer` | 「物語上の役割は何が向いている？」「主役向き？脇役向き？」|
+| `roleplay-burden-scorer` | 「ユーザーへの心理的負荷は？」「RP負荷を測定して」「疲れそうなキャラか確認したい」|
 
 #### 診断→修正の連携フロー
 
 診断後に修正が必要になった場合は以下の順で進める。
 
 ```
-診断（5-type-checker）
+診断（6-type-checker）
     ↓ 問題が見つかったら
 修正（状況に応じて選択）
   ├─ 全体的に修正したい → ai-character-fixer
@@ -143,8 +144,8 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 ## このスキル自体の制約
 
 - このスキルは **案内と判断のみ** を行い、実際の診断・修正・生成はしない。
-- ユーザーが「とりあえず診断して」と言った場合は、データさえあれば `ai-character-5-type-checker` に迷わずルーティングする。
-- スキルを直接指定されている（例：「5type-checkerで診断して」）場合は、このスキルは介入しない。
+- ユーザーが「とりあえず診断して」と言った場合は、データさえあれば `ai-character-6-type-checker` に迷わずルーティングする。
+- スキルを直接指定されている（例：「6type-checkerで診断して」）場合は、このスキルは介入しない。
 - スキルがない操作（例：「比較して」「ランキングして」）を求められた場合は、最も近い用途のスキルを案内しつつ、その操作は対応外です、と伝える。
 
 ---
@@ -153,12 +154,13 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 
 | カテゴリ | スキル | フォルダ | ひと言説明 |
 |---------|--------|---------|-----------|
-| 統合診断 | AI Character 5-Type Checker | `ai-character-5-type-checker/` | 5軸をまとめて簡易診断（**まず迷ったらここ**） |
+| 統合診断 | AI Character 6-Type Checker | `ai-character-6-type-checker/` | 6軸をまとめて簡易診断（**まず迷ったらここ**） |
 | 単体診断 | Character Type Checker | `character-type-checker/` | 日常系 / ドラマ系の適性と表裏乖離 |
 | 単体診断 | AI Character Stability | `ai-character-stability/` | 制御工学的な安定性・崩壊リスク |
 | 単体診断 | AI Self-Description Analyzer | `ai-self-description-analyzer/` | 蒸留結果・自己記述の異常スコアリング |
 | 単体診断 | AI User Conflict Predictor | `ai-user-conflict-predictor/` | ユーザーとの衝突リスク予測 |
 | 単体診断 | Character Role Analyzer | `character-role-analyzer/` | 物語上の役割適性と配役ミスマッチ |
+| 単体診断 | Roleplay Burden Scorer | `roleplay-burden-scorer/` | ユーザーへのロールプレイ負荷を6軸スコアリング |
 | 改善 | AI Character Fixer | `ai-character-fixer/` | 診断結果ベースの安全な修正版生成 |
 | 改善 | AI Fault Mode Deflector | `ai-fault-mode-deflector/` | 故障モードをキャラの信念で内側から封じる |
 | 改善 | Character Prompt Fortifier | `character-prompt-fortifier/` | エンコーディング変換で崩壊耐性を強化 |

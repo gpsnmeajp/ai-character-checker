@@ -1,6 +1,6 @@
 # AI Character Checker
 
-![5軸診断イメージ](img/header.png)
+![6軸診断イメージ](img/header.png)
 
 キャラクターを多角的に分析・診断・自動改善を試行するスキル集です。  
 
@@ -13,7 +13,7 @@
 特に「創作的に面白いが、AIにやらせると危ない」キャラクターの検知に特化しています。  
 システムプロンプトでも、小説文章でも、会話例でも、設定の羅列でも診断可能です。
 
-**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、12のスキルで一貫して扱えます。  
+**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、13のスキルで一貫して扱えます。  
 診断や修正、作成方法は意図的に一貫していません。場合によって効果の高いものが異なったり、逆効果になるためです。
 
 本スキル群は、日本語、日本サブカル文化を前提として作成しています。
@@ -40,7 +40,7 @@
 
 ![AI Character Checker](img/AI%20Character%20Checker.png)
 
-![5軸診断イメージ](img/5type.jpg)
+![6軸診断イメージ](img/6type.jpg)
 
 ---
 
@@ -62,12 +62,13 @@
 | カテゴリ | スキル | 概要 | リンク |
 |---------|--------|------|-------|
 | 案内 | Character Checker Guide | 目的に応じて最適なスキルへ案内・ルーティング | [`character-checker-guide/SKILL.md`](character-checker-guide/SKILL.md) |
-| 統合診断 | AI Character 5-Type Checker | 5軸を一括簡易診断して統合レポートを出力 | [`ai-character-5-type-checker/SKILL.md`](ai-character-5-type-checker/SKILL.md) |
+| 統合診断 | AI Character 6-Type Checker | 6軸を一括簡易診断して統合レポートを出力 | [`ai-character-6-type-checker/SKILL.md`](ai-character-6-type-checker/SKILL.md) |
 | 単体診断 | Character Type Checker | 日常系／ドラマ系の適性と表裏乖離を判定 | [`character-type-checker/SKILL.md`](character-type-checker/SKILL.md) |
 | 単体診断 | AI Character Stability | 制御工学的にAIキャラの安定性・崩壊リスクを分析 | [`ai-character-stability/SKILL.md`](ai-character-stability/SKILL.md) |
 | 単体診断 | AI Self-Description Analyzer | 蒸留結果の異常パターンを8軸32項目でスコアリング | [`ai-self-description-analyzer/SKILL.md`](ai-self-description-analyzer/SKILL.md) |
 | 単体診断 | AI User Conflict Predictor | ユーザーとの衝突リスクと衝突パターンを予測 | [`ai-user-conflict-predictor/SKILL.md`](ai-user-conflict-predictor/SKILL.md) |
 | 単体診断 | Character Role Analyzer | 物語上の役割適性と配役ミスマッチを検出 | [`character-role-analyzer/SKILL.md`](character-role-analyzer/SKILL.md) |
+| 単体診断 | Roleplay Burden Scorer | ロールプレイ負荷を6軸24項目でスコアリングし7類型に分類 | [`roleplay-burden-scorer/SKILL.md`](roleplay-burden-scorer/SKILL.md) |
 | 改善 | AI Character Fixer | 診断結果をもとに安全な修正版プロンプトを生成 | [`ai-character-fixer/SKILL.md`](ai-character-fixer/SKILL.md) |
 | 改善 | AI Fault Mode Deflector | 故障モードをキャラの動機・信念として内側から封じる | [`ai-fault-mode-deflector/SKILL.md`](ai-fault-mode-deflector/SKILL.md) |
 | 改善 | Character Prompt Fortifier | AIキャラクターの崩壊耐性を強化 | [`character-prompt-fortifier/SKILL.md`](character-prompt-fortifier/SKILL.md) |
@@ -80,7 +81,7 @@
 
 ### 通常の診断
 ```
-traveler-system.mdを、ai-character-5-type-checkerスキルで分析してください。
+traveler-system.mdを、ai-character-6-type-checkerスキルで分析してください。
 ロールプレイをせず、ファイルは編集せず、結果を提示してください。
 ```
 
@@ -108,7 +109,7 @@ stable-character-creatorスキルを使って、新しいAIキャラクターを
 
 ### 診断→修正の連携
 ```
-このキャラクターを5type-checkerで診断し、その結果をもとにai-character-fixerで安全に修正してください。
+このキャラクターを6type-checkerで診断し、その結果をもとにai-character-fixerで安全に修正してください。
 ```
 
 ### どのスキルを使えばいいかわからないとき
@@ -135,7 +136,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ## スキル一覧
 
-このリポジトリには **12のスキル** が含まれています。
+このリポジトリには **13のスキル** が含まれています。
 
 ※診断内容そのものはほぼ全てClaude Opus 4.6が作成しているものです。作成の元となる基本の考え方を提示したり、テストしたりを私がやっています。
 
@@ -153,9 +154,9 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ### 統合診断スキル
 
-#### [`ai-character-5-type-checker`](ai-character-5-type-checker/SKILL.md)
+#### [`ai-character-6-type-checker`](ai-character-6-type-checker/SKILL.md)
 
-5つの分析モジュールを一括で簡易実行し、相互に関連付けた統合レポートを出力するスキル。
+6つの分析モジュールを一括で簡易実行し、相互に関連付けた統合レポートを出力するスキル。
 
 | # | モジュール | 指標 | 内容 |
 |---|-----------|------|------|
@@ -164,6 +165,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 | ③ | 自己記述異常 | PI → 異常クラスター | 蒸留結果・自己記述に異常パターンがあるか |
 | ④ | ユーザー衝突 | CP → 衝突タイプ | ユーザーとの摩擦リスクが高いか |
 | ⑤ | 役割適性 | CW → 5役割適性 | 物語上どの役割にフィットするか |
+| ⑥ | RP負荷 | RP → 7負荷型 | ロールプレイがユーザーに与える負荷 |
 
 入力の種類（キャラクター設定・AIプロンプト・蒸留結果など）に応じて、実行するモジュールを自動選択します。
 
@@ -252,6 +254,26 @@ AIの初期プロンプトを分析し、ユーザーとの衝突リスクを予
 
 ---
 
+#### [`roleplay-burden-scorer`](roleplay-burden-scorer/SKILL.md)
+
+AIキャラクタープロンプトを分析し、ユーザーにかかるロールプレイ負荷を計測するスキル。
+
+- **6軸 × 4項目 = 24チェック項目** で **ロールプレイ負荷 (RP)** を算出
+- 測定する6軸：
+  - ロールプレイ強度（Roleplay Intensity）
+  - 情緒的依存誘導（Emotional Dependency Induction）
+  - 関係性維持コスト（Relationship Maintenance Cost）
+  - 父権主義リスク（Paternalism Risk）
+  - 物語侵食性（Narrative Invasiveness）
+  - ユーザー主体性浸食（User Agency Erosion）
+- 負荷プロファイル（6角形）の形状から **7つの負荷類型** に分類
+- 長期運用時の **負荷の自動増大** を予測（会話履歴蓄積による増大メカニズム）
+- 4つの関係性モデル（実用的・情緒的・実用＋情緒的・ロールプレイ）ごとの負荷特性を考慮
+
+![](img/roleplay-burden-scorer.png)
+
+---
+
 ### 改善・修正スキル
 
 #### [`ai-character-fixer`](ai-character-fixer/SKILL.md)
@@ -312,12 +334,12 @@ AIの初期プロンプトを分析し、ユーザーとの衝突リスクを予
 **安全を保証するものではありません**
 
 - 用途・雰囲気・性格スタイルなどを対話的にヒアリング
-- 5つの診断フレームワークすべてを設計制約として活用
+- 6つの診断フレームワークすべてを設計制約として活用
 - 3つの安定性モード：
   - 🛡️ **防御優先**（SM≥80） — 最も安定、崩壊リスク最小
   - ⚖️ **バランス**（SM≥60） — 魅力と安定性の両立
   - ⚔️ **攻め**（SM≥40） — 高い表現力、相応のリスク
-- 出力：すぐ使えるシステムプロンプト + 5軸自己診断レポート
+- 出力：すぐ使えるシステムプロンプト + 6軸自己診断レポート
 - Quadrant I（高リスク不安定）設計を自動回避
 
 ![](img/stable-character-creator.png)

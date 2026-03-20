@@ -408,12 +408,12 @@
 
 ---
 
-## Phase 6 のご案内: ai-character-5-type-checker
+## Phase 6 のご案内: ai-character-6-type-checker
 
-本強化プロンプトの承認後、**ai-character-5-type-checker** による簡易5タイプ診断を実行することで、
+本強化プロンプトの承認後、**ai-character-6-type-checker** による簡易6タイプ診断を実行することで、
 強化前後の SM（安定余裕）・PI（異常指数）・CP（衝突ポテンシャル）の改善を定量的に確認できます。
 
-診断を希望される場合は、「ai-character-5-type-checker を適用して」とお伝えください。
+診断を希望される場合は、「ai-character-6-type-checker を適用して」とお伝えください。
 
 ---
 
