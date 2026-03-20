@@ -13,7 +13,7 @@
 特に「創作的に面白いが、AIにやらせると危ない」キャラクターの検知に特化しています。  
 システムプロンプトでも、小説文章でも、会話例でも、設定の羅列でも診断可能です。
 
-**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、11のスキルで一貫して扱えます。  
+**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、12のスキルで一貫して扱えます。  
 診断や修正、作成方法は意図的に一貫していません。場合によって効果の高いものが異なったり、逆効果になるためです。
 
 本スキル群は、日本語、日本サブカル文化を前提として作成しています。
@@ -59,6 +59,7 @@
 
 | カテゴリ | スキル | 概要 | リンク |
 |---------|--------|------|-------|
+| 案内 | Character Checker Guide | 目的に応じて最適なスキルへ案内・ルーティング | [`character-checker-guide/SKILL.md`](character-checker-guide/SKILL.md) |
 | 統合診断 | AI Character 5-Type Checker | 5軸を一括簡易診断して統合レポートを出力 | [`ai-character-5-type-checker/SKILL.md`](ai-character-5-type-checker/SKILL.md) |
 | 単体診断 | Character Type Checker | 日常系／ドラマ系の適性と表裏乖離を判定 | [`character-type-checker/SKILL.md`](character-type-checker/SKILL.md) |
 | 単体診断 | AI Character Stability | 制御工学的にAIキャラの安定性・崩壊リスクを分析 | [`ai-character-stability/SKILL.md`](ai-character-stability/SKILL.md) |
@@ -108,6 +109,16 @@ stable-character-creatorスキルを使って、新しいAIキャラクターを
 このキャラクターを5type-checkerで診断し、その結果をもとにai-character-fixerで安全に修正してください。
 ```
 
+### どのスキルを使えばいいかわからないとき
+```
+character-checker-guideスキルを使って、何をすればいいか教えてください。
+```
+
+```
+（キャラクター設定ファイルを添付）
+どのスキルで分析すればいいですか？
+```
+
 ---
 
 ## 基本理念
@@ -120,7 +131,19 @@ stable-character-creatorスキルを使って、新しいAIキャラクターを
 
 ## スキル一覧
 
-このリポジトリには **11のスキル** が含まれています。
+このリポジトリには **12のスキル** が含まれています。
+
+### 案内スキル
+
+#### [`character-checker-guide`](character-checker-guide/SKILL.md)
+
+どのスキルを使うべきか迷ったときや、目的が定まっていないときに最初に使うスキル。
+
+- 渡されたデータ（キャラ設定・AIプロンプト・蒸留結果など）と目的をもとに **最適なスキルへルーティング**
+- 目的が不明な場合は最小限のヒアリングを行う
+- スキルを直接指定している場合は介入しない
+
+---
 
 ### 統合診断スキル
 
