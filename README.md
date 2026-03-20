@@ -78,7 +78,7 @@
 
 ### 通常の診断
 ```
-traveler-system.mdを、5type-checkerスキルで分析してください。
+traveler-system.mdを、ai-character-5-type-checkerスキルで分析してください。
 ロールプレイをせず、ファイルは編集せず、結果を提示してください。
 ```
 
