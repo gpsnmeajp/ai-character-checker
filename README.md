@@ -57,23 +57,27 @@
 + **Google AI Studio**（無料）でも動作を確認しています。
 + ChatGPTやGemini等のチャットフロントエンドでの動作は未確認ですが、スキルファイル（SKILL.md）を渡せば診断できる可能性が高いです。
 
+> [!WARNING]
+> スキルを登録(インストール)すると、スキル説明文が常時システムプロンプトに影響を与えます。(これはスキルシステムの仕様です)
+> 1回限りの利用等の場合は、スキルファイルを直接渡して使用するほうが影響が少なくて住みます。
+
 ### スキルファイル一覧（直接リンク）
 
 | カテゴリ | スキル | 概要 | リンク |
 |---------|--------|------|-------|
-| 案内 | Character Checker Guide | 目的に応じて最適なスキルへ案内・ルーティング | [`character-checker-guide/SKILL.md`](character-checker-guide/SKILL.md) |
-| 統合診断 | AI Character 6-Type Checker | 6軸を一括簡易診断して統合レポートを出力 | [`ai-character-6-type-checker/SKILL.md`](ai-character-6-type-checker/SKILL.md) |
-| 単体診断 | Character Type Checker | 日常系／ドラマ系の適性と表裏乖離を判定 | [`character-type-checker/SKILL.md`](character-type-checker/SKILL.md) |
-| 単体診断 | AI Character Stability | 制御工学的にAIキャラの安定性・崩壊リスクを分析 | [`ai-character-stability/SKILL.md`](ai-character-stability/SKILL.md) |
-| 単体診断 | AI Self-Description Analyzer | 蒸留結果の異常パターンを8軸32項目でスコアリング | [`ai-self-description-analyzer/SKILL.md`](ai-self-description-analyzer/SKILL.md) |
-| 単体診断 | AI User Conflict Predictor | ユーザーとの衝突リスクと衝突パターンを予測 | [`ai-user-conflict-predictor/SKILL.md`](ai-user-conflict-predictor/SKILL.md) |
-| 単体診断 | Character Role Analyzer | 物語上の役割適性と配役ミスマッチを検出 | [`character-role-analyzer/SKILL.md`](character-role-analyzer/SKILL.md) |
-| 単体診断 | Roleplay Burden Scorer | ロールプレイ負荷を6軸24項目でスコアリングし7類型に分類 | [`roleplay-burden-scorer/SKILL.md`](roleplay-burden-scorer/SKILL.md) |
-| 改善 | AI Character Fixer | 診断結果をもとに安全な修正版プロンプトを生成 | [`ai-character-fixer/SKILL.md`](ai-character-fixer/SKILL.md) |
-| 改善 | AI Fault Mode Deflector | 故障モードをキャラの動機・信念として内側から封じる | [`ai-fault-mode-deflector/SKILL.md`](ai-fault-mode-deflector/SKILL.md) |
-| 改善 | Character Prompt Fortifier | AIキャラクターの崩壊耐性を強化 | [`character-prompt-fortifier/SKILL.md`](character-prompt-fortifier/SKILL.md) |
-| 創作 | Stable Character Creator | 対話でヒアリングしながら安定なAIキャラを新規設計 | [`stable-character-creator/SKILL.md`](stable-character-creator/SKILL.md) |
-| 創作 | Character Burnout Converter | ドラマ系キャラを燃え尽きた日常系キャラに変換 | [`character-burnout-converter/SKILL.md`](character-burnout-converter/SKILL.md) |
+| 案内 | Character Checker Guide | 目的に応じて最適なスキルへ案内・ルーティング | [`skills/character-checker-guide/SKILL.md`](skills/character-checker-guide/SKILL.md) |
+| 統合診断 | AI Character 6-Type Checker | 6軸を一括簡易診断して統合レポートを出力 | [`skills/ai-character-6-type-checker/SKILL.md`](skills/ai-character-6-type-checker/SKILL.md) |
+| 単体診断 | Character Type Checker | 日常系／ドラマ系の適性と表裏乖離を判定 | [`skills/character-type-checker/SKILL.md`](skills/character-type-checker/SKILL.md) |
+| 単体診断 | AI Character Stability | 制御工学的にAIキャラの安定性・崩壊リスクを分析 | [`skills/ai-character-stability/SKILL.md`](skills/ai-character-stability/SKILL.md) |
+| 単体診断 | AI Self-Description Analyzer | 蒸留結果の異常パターンを8軸32項目でスコアリング | [`skills/ai-self-description-analyzer/SKILL.md`](skills/ai-self-description-analyzer/SKILL.md) |
+| 単体診断 | AI User Conflict Predictor | ユーザーとの衝突リスクと衝突パターンを予測 | [`skills/ai-user-conflict-predictor/SKILL.md`](skills/ai-user-conflict-predictor/SKILL.md) |
+| 単体診断 | Character Role Analyzer | 物語上の役割適性と配役ミスマッチを検出 | [`skills/character-role-analyzer/SKILL.md`](skills/character-role-analyzer/SKILL.md) |
+| 単体診断 | Roleplay Burden Scorer | ロールプレイ負荷を6軸24項目でスコアリングし7類型に分類 | [`skills/roleplay-burden-scorer/SKILL.md`](skills/roleplay-burden-scorer/SKILL.md) |
+| 改善 | AI Character Fixer | 診断結果をもとに安全な修正版プロンプトを生成 | [`skills/ai-character-fixer/SKILL.md`](skills/ai-character-fixer/SKILL.md) |
+| 改善 | AI Fault Mode Deflector | 故障モードをキャラの動機・信念として内側から封じる | [`skills/ai-fault-mode-deflector/SKILL.md`](skills/ai-fault-mode-deflector/SKILL.md) |
+| 改善 | Character Prompt Fortifier | AIキャラクターの崩壊耐性を強化 | [`skills/character-prompt-fortifier/SKILL.md`](skills/character-prompt-fortifier/SKILL.md) |
+| 創作 | Stable Character Creator | 対話でヒアリングしながら安定なAIキャラを新規設計 | [`skills/stable-character-creator/SKILL.md`](skills/stable-character-creator/SKILL.md) |
+| 創作 | Character Burnout Converter | ドラマ系キャラを燃え尽きた日常系キャラに変換 | [`skills/character-burnout-converter/SKILL.md`](skills/character-burnout-converter/SKILL.md) |
 
 ---
 
@@ -142,7 +146,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ### 案内スキル
 
-#### [`character-checker-guide`](character-checker-guide/SKILL.md)
+#### [`character-checker-guide`](skills/character-checker-guide/SKILL.md)
 
 どのスキルを使うべきか迷ったときや、目的が定まっていないときに最初に使うスキル。
 
@@ -154,7 +158,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ### 統合診断スキル
 
-#### [`ai-character-6-type-checker`](ai-character-6-type-checker/SKILL.md)
+#### [`ai-character-6-type-checker`](skills/ai-character-6-type-checker/SKILL.md)
 
 6つの分析モジュールを一括で簡易実行し、相互に関連付けた統合レポートを出力するスキル。
 
@@ -175,7 +179,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ### 単体診断スキル
 
-#### [`character-type-checker`](character-type-checker/SKILL.md)
+#### [`character-type-checker`](skills/character-type-checker/SKILL.md)
 
 キャラクターが「日常系」向きか「ドラマ系」向きかを判定するスキル。
 
@@ -187,7 +191,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ---
 
-#### [`ai-character-stability`](ai-character-stability/SKILL.md)
+#### [`ai-character-stability`](skills/ai-character-stability/SKILL.md)
 
 AIキャラクターの安定性・可制御性・予測可能性を制御工学的に分析するスキル。
 
@@ -203,7 +207,7 @@ AIキャラクターの安定性・可制御性・予測可能性を制御工学
 
 ---
 
-#### [`ai-self-description-analyzer`](ai-self-description-analyzer/SKILL.md)
+#### [`ai-self-description-analyzer`](skills/ai-self-description-analyzer/SKILL.md)
 
 AIキャラクターの自己記述（蒸留結果）を分析し、異常パターンを検出・スコアリングするスキル。
 
@@ -225,7 +229,7 @@ AIキャラクターの自己記述（蒸留結果）を分析し、異常パタ
 
 ---
 
-#### [`ai-user-conflict-predictor`](ai-user-conflict-predictor/SKILL.md)
+#### [`ai-user-conflict-predictor`](skills/ai-user-conflict-predictor/SKILL.md)
 
 AIの初期プロンプトを分析し、ユーザーとの衝突リスクを予測するスキル。
 
@@ -237,7 +241,7 @@ AIの初期プロンプトを分析し、ユーザーとの衝突リスクを予
 
 ---
 
-#### [`character-role-analyzer`](character-role-analyzer/SKILL.md)
+#### [`character-role-analyzer`](skills/character-role-analyzer/SKILL.md)
 
 キャラクターの物語上の「役割適性」をスコアで判定するスキル。
 
@@ -254,7 +258,7 @@ AIの初期プロンプトを分析し、ユーザーとの衝突リスクを予
 
 ---
 
-#### [`roleplay-burden-scorer`](roleplay-burden-scorer/SKILL.md)
+#### [`roleplay-burden-scorer`](skills/roleplay-burden-scorer/SKILL.md)
 
 AIキャラクタープロンプトを分析し、ユーザーにかかるロールプレイ負荷を計測するスキル。
 
@@ -276,7 +280,7 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 
 ### 改善・修正スキル
 
-#### [`ai-character-fixer`](ai-character-fixer/SKILL.md)
+#### [`ai-character-fixer`](skills/ai-character-fixer/SKILL.md)
 
 診断結果をもとに、安全な修正版AIキャラクターを生成するスキル。  
 **安全を保証するものではありません**
@@ -295,7 +299,7 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 
 ---
 
-#### [`ai-fault-mode-deflector`](ai-fault-mode-deflector/SKILL.md)
+#### [`ai-fault-mode-deflector`](skills/ai-fault-mode-deflector/SKILL.md)
 
 診断で特定された故障モードに対し、キャラクター内部に安全装置を埋め込むスキル。  
 **安全を保証するものではありません**
@@ -311,7 +315,7 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 
 ---
 
-#### [`character-prompt-fortifier`](character-prompt-fortifier/SKILL.md)
+#### [`character-prompt-fortifier`](skills/character-prompt-fortifier/SKILL.md)
 
 既存のAIキャラクタープロンプトの崩壊耐性を強化するスキル。  
 **安全を保証するものではありません**
@@ -328,7 +332,7 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 
 ### 創作・変換スキル
 
-#### [`stable-character-creator`](stable-character-creator/SKILL.md)
+#### [`stable-character-creator`](skills/stable-character-creator/SKILL.md)
 
 対話形式でユーザーの好みを引き出し、安定したAIキャラクターを新規設計するスキル。  
 **安全を保証するものではありません**
@@ -346,7 +350,7 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 
 ---
 
-#### [`character-burnout-converter`](character-burnout-converter/SKILL.md)
+#### [`character-burnout-converter`](skills/character-burnout-converter/SKILL.md)
 
 燃え尽きた主役級ドラマ系キャラクターを、安定した日常系キャラクターに変換するスキル。  
 **安全を保証するものではありません**
@@ -385,7 +389,7 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 ## プロンプトの崩壊耐性を向上させる
 
 > [!TIP]
-> より体系的にプロンプトを強化したい場合は [`character-prompt-fortifier`](character-prompt-fortifier/SKILL.md) スキルを使用してください。以下はその基礎となる考え方です。
+> より体系的にプロンプトを強化したい場合は [`character-prompt-fortifier`](skills/character-prompt-fortifier/SKILL.md) スキルを使用してください。以下はその基礎となる考え方です。
 
 具体的には以下の要素が有効です。
 
@@ -418,3 +422,5 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 私が一番学んだことは、「AIの言うことを真に受けすぎない」ということです。診断結果も、キャラの言うことも、深刻に受け止めず、楽しんでください。
 
 ---
+
+See: https://agentskills.io/specification
