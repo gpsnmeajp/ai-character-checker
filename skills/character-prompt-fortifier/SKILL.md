@@ -1,18 +1,7 @@
 ---
 name: character-prompt-fortifier
 description: |
-  AIキャラクタープロンプトを、幅広い言語モデル（小規模SLM〜大規模・思考モデル）で
-  崩壊耐性の高いプロンプトに変換・強化するスキル。
-  一人称の自述形式・制約の性格内在化・理由付与・XMLセクション構造・
-  存在論的切り分け・few-shotアンカー・自己監視機構など、
-  12の強化技法を体系的に適用してプロンプトを堅牢化する。
-  既存のAIキャラクタープロンプト、設定文、蒸留結果、新規コンセプトを入力として受け付ける。
-  ai-character-stability・ai-fault-mode-deflector・stable-character-creator を活用する。
-  「プロンプトを堅牢化して」「崩壊耐性を上げて」「自述形式に変換して」
-  「SLMでも崩れないプロンプトにしたい」「マルチモデル対応にして」などと聞いたとき使用する。
-  ai-character-fixer（診断ベースの修正）とは異なり、プロンプトの
-  「エンコーディング形式」そのものを変換して耐性を上げるアプローチを取る。
-  stable-character-creator で生成したプロンプトにも適用可能。
+  修復: AIキャラクタープロンプトの崩壊耐性の強化を試みるスキル
 ---
 
 # Character Prompt Fortifier

@@ -1,14 +1,7 @@
 ---
 name: stable-character-creator
 description: |
-  ユーザーの好み・用途を対話的にヒアリングし、既存の6つの診断スキル
-  （character-type-checker, ai-character-stability, ai-self-description-analyzer,
-  ai-user-conflict-predictor, character-role-analyzer, roleplay-burden-scorer）の知見を活用し、
-  安定性と魅力を両立したAIキャラクターのシステムプロンプトを生成するスキル。
-  「AIキャラを作りたい」「安定したキャラを作って」「崩壊しないキャラが欲しい」
-  「キャラメイク」「キャラクタープロンプトの作成」などと聞いたときに使用する。
-  既存キャラの再設計（安定化リファクタ）にも対応可能。
-  出力はコピー＆ペーストで即使えるシステムプロンプトと6軸の簡易自己診断レポート。
+  作成: ユーザーの好み・用途を対話的にヒアリングし、キャラクターを作成するスキル
 ---
 
 # Stable Character Creator — お好みの安定キャラ設計スキル

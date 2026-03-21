@@ -1,0 +1,9 @@
+{
+  "name": "ai-character-checker",
+  "version": "1.0.2",
+  "description": "AIキャラクターを多角的に分析・診断・修正するスキル集",
+  "author": { "name": "gpsnmeajp" },
+  "license": "CC0",
+  "repository": "https://github.com/gpsnmeajp/ai-character-checker",
+  "skills": "./skills/"
+}

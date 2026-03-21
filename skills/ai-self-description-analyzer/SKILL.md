@@ -1,14 +1,7 @@
 ---
 name: ai-self-description-analyzer
 description: |
-  AIキャラクターの自己記述（YAML、自由文、プロンプト形式など）を分析し、
-  崩壊・迎合・空洞化・自走膨張などの異常パターンを検出・スコアリングするスキル。
-  蒸留プロンプト（会話履歴からAI自身に自己記述を出力させたもの）の診断に特化しているが、
-  人間が書いたキャラクタープロンプトの健全性チェックにも使用可能。
-  「蒸留結果を診断して」「自己記述の異常分析をして」「迎合度を測定して」
-  「蒸留YAMLを分析して」「キャラクターの変質を検出して」などと聞いたとき使用する。
-  ai-character-stability と併用すると安定余裕と異常の関係をより深く分析できる。
-  character-type-checker や character-role-analyzer との時系列監視にも対応。
+  診断: AIキャラクターの自己記述を分析し異常検出するスキル
 ---
 
 # AI Self-Description Pathology Analyzer
