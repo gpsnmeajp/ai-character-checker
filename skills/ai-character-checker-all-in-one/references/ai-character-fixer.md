@@ -214,7 +214,7 @@ AIキャラクターの診断スキル群は問題を発見するためのツー
 ### 修正手法の概要
 
 > **📎 各手法の適用条件・具体的手法・注意事項の全詳細は
-> `references/modification-catalog.md` § 修正手法カタログ を参照。**
+> `references/ai-character-fixer--modification-catalog.md` § 修正手法カタログ を参照。**
 
 以下の10手法を組み合わせて修正を行う。
 
@@ -234,7 +234,7 @@ AIキャラクターの診断スキル群は問題を発見するためのツー
 ### 各モードの出力
 
 > **📎 各モードの詳細な出力テンプレートは
-> `references/modification-catalog.md` の該当セクションを参照。**
+> `references/ai-character-fixer--modification-catalog.md` の該当セクションを参照。**
 
 **モードA（プロンプト直接修正）**: 診断サマリー → キャラクターの核 → 適用手法表 → スコア推定変化 → 修正済みプロンプト全文 → 修正解説 → 運用推奨 → 残存リスク
 
@@ -284,14 +284,14 @@ SM を向上させるには、Cx（複雑性）と Ac（積極性）を下げる
 **魅力最優先** → 1〜2を中心に、加えて運用レベル（⑨⑩）の安全策を推奨
 
 > **📎 第IV象限への設計パターン集（忠実な従者型、マスコット型、職人型等）は
-> `references/modification-catalog.md` § 第IV象限への設計パターン集 を参照。**
+> `references/ai-character-fixer--modification-catalog.md` § 第IV象限への設計パターン集 を参照。**
 
 ---
 
 ## 異常・衝突の修正ガイドライン
 
 > **📎 P1〜P8（異常修正）、F1〜F6（衝突修正）の個別対処法の全詳細は
-> `references/modification-catalog.md` の該当セクションを参照。**
+> `references/ai-character-fixer--modification-catalog.md` の該当セクションを参照。**
 
 ### 異常修正の概要（P1〜P8）
 

@@ -59,12 +59,17 @@
 
 > [!WARNING]
 > スキルを登録(インストール)すると、スキル説明文が常時システムプロンプトに影響を与えます。(これはスキルシステムの仕様です)
-> 1回限りの利用等の場合は、スキルファイルを直接渡して使用するほうが影響が少なくて住みます。
+> 1回限りの利用等の場合は、スキルファイルを直接渡して使用するほうが影響が少なくて済みます。
+
+> [!NOTE]
+> **claude.ai でスキルを1つしかインストールできない場合は [`ai-character-checker-all-in-one`](skills/ai-character-checker-all-in-one/SKILL.md) を使用してください。**  
+> 全スキルが1ファイルに統合されており、状況に応じて自動的に適切なスキルを参照します。
 
 ### スキルファイル一覧（直接リンク）
 
 | カテゴリ | スキル | 概要 | リンク |
 |---------|--------|------|-------|
+| **統合 (All-in-One)** | **AI Character Checker All-in-One** | **全スキルを1つに統合。claude.ai のスキル1つ制限対応版** | [`skills/ai-character-checker-all-in-one/SKILL.md`](skills/ai-character-checker-all-in-one/SKILL.md) |
 | 案内 | Character Checker Guide | 目的に応じて最適なスキルへ案内・ルーティング | [`skills/character-checker-guide/SKILL.md`](skills/character-checker-guide/SKILL.md) |
 | 統合診断 | AI Character 6-Type Checker | 6軸を一括簡易診断して統合レポートを出力 | [`skills/ai-character-6-type-checker/SKILL.md`](skills/ai-character-6-type-checker/SKILL.md) |
 | 単体診断 | Character Type Checker | 日常系／ドラマ系の適性と表裏乖離を判定 | [`skills/character-type-checker/SKILL.md`](skills/character-type-checker/SKILL.md) |
@@ -140,9 +145,24 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ## スキル一覧
 
-このリポジトリには **13のスキル** が含まれています。
+このリポジトリには **14のスキル** が含まれています。
 
 ※診断内容そのものはほぼ全てClaude Opus 4.6が作成しているものです。作成の元となる基本の考え方を提示したり、テストしたりを私がやっています。
+
+### 統合スキル（All-in-One）
+
+#### [`ai-character-checker-all-in-one`](skills/ai-character-checker-all-in-one/SKILL.md)
+
+claude.ai はスキルを1度に1つしかインストールできないため、全スキルを1つに統合したスキル。
+
+- 内部に12スキル分のリファレンスを同梱し、状況に応じて自動で参照
+- ルーティングロジックも内包（`character-checker-guide` 相当の案内機能も含む）
+- `scripts/merge_all_in_one.py` で各スキルの更新を決定論的に反映可能
+
+> claude.ai でスキルを1つしか登録できない場合はこちらを使用してください。  
+> 複数スキルを個別に使用できる環境（GitHub Copilot など）では、個別スキルを直接使う方が軽量です。
+
+---
 
 ### 案内スキル
 

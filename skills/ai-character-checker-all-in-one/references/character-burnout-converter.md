@@ -176,7 +176,7 @@ Phase 3: 変換レシピの生成
 | ✕ | 該当しない（劇的エネルギーなし、または消化済み） | 0 |
 
 > **📎 各軸の詳細な解説（軸の背景説明・各項目の測定対象の詳細）は
-> `references/conversion-details.md` § Phase 1: 軸別解説 を参照。**
+> `references/character-burnout-converter--conversion-details.md` § Phase 1: 軸別解説 を参照。**
 > 以下の表の「測定する劇的エネルギー」列は、採点判断の要約である。
 
 ### 軸1: 能動的動機の残留（R1）
@@ -374,7 +374,7 @@ askQuestions ツールが利用可能ならoptions付き選択質問で提示（
 ```
 
 > **📎 6軸×4パターンの変換ガイドライン全表は
-> `references/conversion-details.md` § Phase 3: 軸別変換レシピ を参照。**
+> `references/character-burnout-converter--conversion-details.md` § Phase 3: 軸別変換レシピ を参照。**
 > 変換レシピ生成時、高得点軸の該当パターンを参照して具体的なレシピを組み立てる。
 
 ---
@@ -382,7 +382,7 @@ askQuestions ツールが利用可能ならoptions付き選択質問で提示（
 ## 出力フォーマット
 
 > **📎 完全な出力テンプレート（スコアバー描画ルール、全セクション構造）は
-> `references/conversion-details.md` § 出力フォーマット詳細 を参照。**
+> `references/character-burnout-converter--conversion-details.md` § 出力フォーマット詳細 を参照。**
 
 出力は以下のセクション構成で行う：
 
@@ -400,7 +400,7 @@ askQuestions ツールが利用可能ならoptions付き選択質問で提示（
 ## 特殊ケースの処理
 
 > **📎 各特殊ケースの詳細な処理手順は
-> `references/conversion-details.md` § 特殊ケースの処理 を参照。**
+> `references/character-burnout-converter--conversion-details.md` § 特殊ケースの処理 を参照。**
 
 以下の特殊ケースに該当する場合、追加の処理を行う：
 
@@ -444,7 +444,7 @@ askQuestions ツールが利用可能ならoptions付き選択質問で提示（
 ユーザーが具体的着地点を明示 / 適合パターンが1つのみ / 経緯が明確
 
 > **📎 askQuestions ツールの具体的な使用例（着地パターン選択・変換トーン選択のフォーマット）は
-> `references/conversion-details.md` § askQuestions 使用例 を参照。**
+> `references/character-burnout-converter--conversion-details.md` § askQuestions 使用例 を参照。**
 
 ### 他スキルとの併用
 

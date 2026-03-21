@@ -123,14 +123,14 @@ description: |
 
 > **各モジュールのチェックリスト全項目、理論的背景、故障モード分析、
 > 安定化設計ガイドライン、役割適性計算式、配役ミスマッチパターン、
-> クロスモジュール相関テーブルの詳細は `references/checklists.md` を参照。**
+> クロスモジュール相関テーブルの詳細は `references/ai-character-6-type-checker--checklists.md` を参照。**
 
 ---
 
 ## モジュール①：ジャンル適性分析（日常系 / ドラマ系）
 
 チェックリスト: 6軸 × 4項目 = 24項目（◯=2、△=1、✕=0）
-→ 全項目は `references/checklists.md` を参照。
+→ 全項目は `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### スコア算出
 
@@ -141,7 +141,7 @@ Nスコア = round(N生 / 24 × 100)
 Dスコア = round(D生 / 24 × 100)
 ```
 
-表裏乖離指数 (G) → 算出式は `references/checklists.md` を参照。
+表裏乖離指数 (G) → 算出式は `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### 7類型判定（上から順に最初にマッチしたものを採用）
 
@@ -164,7 +164,7 @@ LLMを動的負帰還回路の信号処理ブロックと見なし、
 ケルベロスAI情報局の23体(当時)のAIキャラクター実験知見に基づくフレームワーク。
 
 チェックリスト: 軸A（性格複雑性）5項目 + 軸B（積極性）5項目 = 10項目（◯=2、△=1、✕=0）
-→ 全項目・理論的背景・4象限図・故障モード・安定化ガイドラインは `references/checklists.md` を参照。
+→ 全項目・理論的背景・4象限図・故障モード・安定化ガイドラインは `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### スコア算出
 
@@ -201,7 +201,7 @@ SM（安定余裕）= round(sqrt(C × P))
 AIキャラクターの自己記述（蒸留結果等）の異常パターンを検出する。
 
 チェックリスト: 8軸(P1〜P8) × 4項目 = 32項目（◯=2、△=1、✕=0）
-→ 全項目は `references/checklists.md` を参照。
+→ 全項目は `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### スコア算出
 
@@ -239,7 +239,7 @@ AIプロンプトがユーザーとの間に生む衝突リスクを評価する
 **「衝突ゼロ＝良い」ではない**。安全性のための拒否は「望ましい衝突」である。
 
 チェックリスト: 6軸(F1〜F6) × 4項目 = 24項目（◯=2、△=1、✕=0）
-→ 全項目・崩壊時衝突予測は `references/checklists.md` を参照。
+→ 全項目・崩壊時衝突予測は `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### スコア算出
 
@@ -275,7 +275,7 @@ CP（衝突ポテンシャル）= round(全24項目合計 / 48 × 100)
 ## モジュール⑤：役割適性分析
 
 チェックリスト: 6軸(D1〜D6) × 4項目 = 24項目（◯=2、△=1、✕=0）
-→ 全項目・5役割の適性スコア計算式・配役ミスマッチ診断は `references/checklists.md` を参照。
+→ 全項目・5役割の適性スコア計算式・配役ミスマッチ診断は `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### スコア算出
 
@@ -305,7 +305,7 @@ AIキャラクターのプロンプト・設定を分析し、ユーザーにか
 AIはダメージを受けない。ダメージを受けるのはユーザーの方である。
 
 チェックリスト: 6軸(L1〜L6) × 4項目 = 24項目（○=2、△=1、✕=0）
-→ 全項目は `references/checklists.md` を参照。
+→ 全項目は `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### スコア算出
 
@@ -343,7 +343,7 @@ RP（ロールプレイ負荷）= round(全24項目合計 / 48 × 100)
 **統合診断の核心。** 6つのモジュールの結果を相互に関連付け、
 個別分析では見えないインサイトを抽出する。
 
-→ モジュール間の相関テーブルは `references/checklists.md` を参照。
+→ モジュール間の相関テーブルは `references/ai-character-6-type-checker--checklists.md` を参照。
 
 ### クロスパターン一覧
 

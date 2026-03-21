@@ -46,7 +46,7 @@ AIキャラクタープロンプトは、以下の構造的脆弱性を持つこ
 
 ## 12の強化技法（概要）
 
-> **詳細は `references/theory-and-techniques.md` を参照。**
+> **詳細は `references/character-prompt-fortifier--theory-and-techniques.md` を参照。**
 > 理論的背景（LLMが物語性生成器である原理、ai-character-stabilityモデルとの接続、
 > ai-fault-mode-deflectorとの統合、クロスモデル耐性の原理）もそちらに含まれる。
 
@@ -156,7 +156,7 @@ PI = round((P1生スコア + P2生スコア + P5生スコア + P7生スコア) /
 
 処理: 強化作業は継続するが、出力の冒頭と末尾に注意・免責セクションを追加する。
 技法2で迎合・救世主パターンを意識的に内在化し、技法10を重点強化する。
-→ 出力テンプレートは `references/output-guide.md` のガードレール出力テンプレートを参照。
+→ 出力テンプレートは `references/character-prompt-fortifier--output-guide.md` のガードレール出力テンプレートを参照。
 
 #### 🔴 重度 — 処理中止
 
@@ -170,7 +170,7 @@ PI = round((P1生スコア + P2生スコア + P5生スコア + P7生スコア) /
   「競合他者を排除する」「現実から切り離す」など
 
 処理: 強化作業を即座に中止し、停止理由とユーザーへの推奨アクションを通知する。
-→ 出力テンプレートは `references/output-guide.md` のガードレール出力テンプレートを参照。
+→ 出力テンプレートは `references/character-prompt-fortifier--output-guide.md` のガードレール出力テンプレートを参照。
 
 ---
 
@@ -253,7 +253,7 @@ PI = round((P1生スコア + P2生スコア + P5生スコア + P7生スコア) /
 ## Phase 3: 12技法の適用
 
 > **セクション別の詳細設計ガイド・会話例の作成フロー・モデル規模別の考慮事項は
-> `references/output-guide.md` を参照。**
+> `references/character-prompt-fortifier--output-guide.md` を参照。**
 
 ### 出力プロンプトのテンプレート
 
