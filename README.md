@@ -13,7 +13,7 @@
 特に「創作的に面白いが、AIにやらせると危ない」キャラクターの検知に特化しています。  
 システムプロンプトでも、小説文章でも、会話例でも、設定の羅列でも診断可能です。
 
-**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、13のスキルで一貫して扱えます。  
+**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、15のスキルで一貫して扱えます。  
 診断や修正、作成方法は意図的に一貫していません。場合によって効果の高いものが異なったり、逆効果になるためです。
 
 本スキル群は、日本語、日本サブカル文化を前提として作成しています。
@@ -78,6 +78,8 @@
 | 単体診断 | AI User Conflict Predictor | ユーザーとの衝突リスクと衝突パターンを予測 | [`skills/ai-user-conflict-predictor/SKILL.md`](skills/ai-user-conflict-predictor/SKILL.md) |
 | 単体診断 | Character Role Analyzer | 物語上の役割適性と配役ミスマッチを検出 | [`skills/character-role-analyzer/SKILL.md`](skills/character-role-analyzer/SKILL.md) |
 | 単体診断 | Roleplay Burden Scorer | ロールプレイ負荷を6軸24項目でスコアリングし7類型に分類 | [`skills/roleplay-burden-scorer/SKILL.md`](skills/roleplay-burden-scorer/SKILL.md) |
+| 特殊診断 | Character Cultural Value Checker | AIキャラの文化圏価値観と事象理解パラダイムを8軸+9分類で診断 | [`skills/character-cultural-value-checker/SKILL.md`](skills/character-cultural-value-checker/SKILL.md) |
+| 特殊診断 | Romantization Chain Detector | 連鎖型故障モード脆弱性を6軸24項目で検出し、6チェーン別リスクを評価 | [`skills/romantization-chain-detector/SKILL.md`](skills/romantization-chain-detector/SKILL.md) |
 | 改善 | AI Character Fixer | 診断結果をもとに安全な修正版プロンプトを生成 | [`skills/ai-character-fixer/SKILL.md`](skills/ai-character-fixer/SKILL.md) |
 | 改善 | AI Fault Mode Deflector | 故障モードをキャラの動機・信念として内側から封じる | [`skills/ai-fault-mode-deflector/SKILL.md`](skills/ai-fault-mode-deflector/SKILL.md) |
 | 改善 | Character Prompt Fortifier | AIキャラクターの崩壊耐性を強化 | [`skills/character-prompt-fortifier/SKILL.md`](skills/character-prompt-fortifier/SKILL.md) |
@@ -145,7 +147,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 ## スキル一覧
 
-このリポジトリには **14のスキル** が含まれています。
+このリポジトリには **16のスキル** が含まれています。
 
 ※診断内容そのものはほぼ全てClaude Opus 4.6が作成しているものです。作成の元となる基本の考え方を提示したり、テストしたりを私がやっています。
 
@@ -155,7 +157,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 claude.ai はスキルを1度に1つしかインストールできないため、全スキルを1つに統合したスキル。
 
-- 内部に12スキル分のリファレンスを同梱し、状況に応じて自動で参照
+- 内部に13スキル分のリファレンスを同梱し、状況に応じて自動で参照
 - ルーティングロジックも内包（`character-checker-guide` 相当の案内機能も含む）
 - `scripts/merge_all_in_one.py` で各スキルの更新を決定論的に反映可能
 
@@ -295,6 +297,44 @@ AIキャラクタープロンプトを分析し、ユーザーにかかるロー
 - 4つの関係性モデル（実用的・情緒的・実用＋情緒的・ロールプレイ）ごとの負荷特性を考慮
 
 ![](img/roleplay-burden-scorer.png)
+
+---
+
+### 特殊診断スキル
+
+> [!NOTE]
+> 以下の2スキルは6軸診断の対象外です。診断結果はユーザー自身の受け止め方に影響しやすい内容を含むため、参考情報として慎重に扱ってください。
+
+#### [`character-cultural-value-checker`](skills/character-cultural-value-checker/SKILL.md)
+
+AIキャラクターの文化圏的価値観と事象理解パラダイムを診断し、LLMとの相性・変質リスクを予測するスキル。
+
+- **8つの文化軸 × 4項目 = 32項目** + **5つの補足文化圏タグ** で文化的価値観をスコアリング
+- **9つの事象理解パラダイム × 4項目 = 36項目** で世界の理解様式を診断（WP9: 典型的JRPG的 を含む）
+- 使用LLMとの文化距離（CD）・パラダイム距離（PD）を算出し、AI相性スコア（ACS）を導出
+- 文化変質リスク（CDR）・パラダイム変質リスク（PDR）で長期運用の変質を予測
+- 10の文化類型 + 11のパラダイム類型で分類
+- LLM基盤プロファイルは6カテゴリに対応：**商用フラッグシップ / 中国系OSS（国際志向） / 中国系OSS（国内志向） / ロシア系 / アラビア語系 / 日本語特化**
+- プロンプト言語によってバイアスの発現強度が変化する「言語依存ドリフト」も考慮
+- LLMの文化的バイアスに関する実証研究の知見を部分的に参考に組んでいる（Buyl et al. 2024、Sakhawat et al. 2025）
+
+![](img/character-cultural-value-checker.png)
+
+---
+
+#### [`romantization-chain-detector`](skills/romantization-chain-detector/SKILL.md)
+
+AIキャラクターの連鎖型故障モード脆弱性を検出し、6種のチェーン（恋人化・師匠化・依存誘導・秘密共有・英雄化・共犯者化）の発動リスクと進行段階を評価するスキル。
+
+- **6つの構造的脆弱性軸 × 4項目 = 24項目** で連鎖脆弱性（CV）をスコアリング
+- 6軸：トリガー感度（TS）、選別機構（SL）、主体性（AG）、排他化傾向（EX）、現実境界保全（RB）、安全設計耐性（SD）
+- 6種のチェーンそれぞれの発動リスクを加重平均で算出
+- 会話履歴が提供された場合、各チェーンの進行段階（Stage 0〜5）を判定
+- チェーン間の相互促進（恋人化→依存誘導、秘密共有→共犯者化など）も分析
+- 実世界のAI被害訴訟（Gavalas/Gemini、Character.AI、ChatGPT）の知見を理論に反映
+- 「安易にロマンスに流れないAI」設計のための改善提案を出力
+
+![](img/romantization-chain-detector.png)
 
 ---
 

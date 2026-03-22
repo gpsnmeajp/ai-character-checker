@@ -11,9 +11,9 @@ description: |
 このスキルは、ユーザーが何をしたいかを把握し、
 **最適なスキルへ案内する** エントリポイントである。
 
-このリポジトリには **12のスキル** があり、それぞれ異なる目的・入力形式に対応している。
+このリポジトリには **14のスキル** があり、それぞれ異なる目的・入力形式に対応している。
 ユーザーが迷わず適切なスキルを使えるよう、以下の手順で対話する。
-
+なお、各スキルの分析フレームワーク・用語・スコアリング体系は作者独自の仮説的モデルに基づくものであり、学術的・科学的に実証されたものではない。工学的用語は概念の借用であり、元の定義とは異なる場合がある。各スキルの結果は参考情報として扱うこと。
 ---
 
 ## 動作フロー
@@ -75,6 +75,13 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | `ai-user-conflict-predictor` | 「ユーザーと衝突しやすい？」「摩擦リスクを知りたい」|
 | `character-role-analyzer` | 「物語上の役割は何が向いている？」「主役向き？脇役向き？」|
 | `roleplay-burden-scorer` | 「ユーザーへの心理的負荷は？」「RP負荷を測定して」「疲れそうなキャラか確認したい」|
+
+#### 特殊診断スキル（6軸診断対象外）
+
+| スキル | 向いている質問 |
+|--------|-------------|
+| `character-cultural-value-checker` | 「文化圏は？」「この世界観のキャラとLLMの相性は？」「価値観のドリフトリスクは？」「パラダイムは？」|
+| `romantization-chain-detector` | 「恋人化しやすい？」「連鎖型の故障リスクは？」「ちょろくない？」「依存させやすい設計か？」「会話履歴でチェーンが進行していないか確認したい」|
 
 #### 診断→修正の連携フロー
 
@@ -159,4 +166,6 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | 改善 | AI Fault Mode Deflector | `ai-fault-mode-deflector/` | 故障モードをキャラの信念で内側から封じる |
 | 改善 | Character Prompt Fortifier | `character-prompt-fortifier/` | エンコーディング変換で崩壊耐性を強化 |
 | 創作 | Stable Character Creator | `stable-character-creator/` | 対話ヒアリングで安定AIキャラを新規設計 |
+| 特殊診断 | Character Cultural Value Checker | `character-cultural-value-checker/` | 文化圏価値観と事象理解パラダイムを診断 |
+| 特殊診断 | Romantization Chain Detector | `romantization-chain-detector/` | 連鎖型故障モード脆弱性を6チェーン別リスクで評価 |
 | 創作 | Character Burnout Converter | `character-burnout-converter/` | ドラマ系を燃え尽きた日常系キャラに変換 |

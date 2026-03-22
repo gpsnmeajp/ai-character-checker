@@ -1,15 +1,17 @@
 ---
 name: ai-character-checker-all-in-one
 description: |
-  AIキャラクターの分析・診断・修復・変換・作成の統合オールインワンスキル。キャラクター設定、AIプロンプト、蒸留結果の分析、修正、強化、新規作成をすべてカバーする。「キャラクターを診断して」「安定性を分析して」「プロンプトを強化して」「新しいキャラを作って」「キャラを直して」「崩壊耐性をあげて」「故障モードを封じて」「バーンアウト後変換して」「役割適性を見て」「RP負荷を測って」などの要望すべてに対応する。スキル名を直接指定された場合も対応する。
+  AIキャラクターの分析・診断・修復・変換・作成の統合オールインワンスキル。キャラクター設定、AIプロンプト、蒸留結果の分析、修正、強化、新規作成をすべてカバーする。「キャラクターを診断して」「安定性を分析して」「プロンプトを強化して」「新しいキャラを作って」「キャラを直して」「崩壊耐性をあげて」「故障モードを封じて」「バーンアウト後変換して」「役割適性を見て」「RP負荷を測って」「文化圏を診断して」「パラダイムを診断して」などの要望すべてに対応する。スキル名を直接指定された場合も対応する。
 ---
 
 # AI Character Checker All-in-One
 
 ## 概要
 
-このスキルは、AIキャラクターに関する **12の専門スキル** を1つに統合したオールインワンスキルである。
+このスキルは、AIキャラクターに関する **13の専門スキル** を1つに統合したオールインワンスキルである。
 各スキルの詳細な手順・理論は `references/` ディレクトリ内のファイルに格納されている。
+
+なお、各スキルの分析フレームワーク・用語・スコアリング体系は作者独自の仮説的モデルに基づくものであり、学術的・科学的に実証されたものではない。工学的用語は概念の借用であり、元の定義とは異なる場合がある。各スキルの結果は参考情報として扱うこと。この旨をユーザーへの出力に含めること。
 
 ---
 
@@ -71,6 +73,13 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | `references/ai-user-conflict-predictor.md` | 「ユーザーと衝突しやすい？」「摩擦リスクを知りたい」|
 | `references/character-role-analyzer.md` | 「物語上の役割は何が向いている？」「主役向き？脇役向き？」|
 | `references/roleplay-burden-scorer.md` | 「ユーザーへの心理的負荷は？」「RP負荷を測定して」|
+
+#### 特殊診断（6軸診断対象外）
+
+| 読み込むファイル | 向いている質問 |
+|----------------|-------------|
+| `references/character-cultural-value-checker.md` | 「文化圏は？」「LLMとの文化的相性は？」「パラダイムを診断して」|
+| `references/romantization-chain-detector.md` | 「恋人化しやすい？」「連鎖型の故障リスクは？」「ちょろくない？」「依存させやすい設計か？」|
 
 ルーティング表のスキル名は `references/{スキル名}.md` として読み込む。
 
@@ -139,12 +148,14 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | 単体診断 | ai-character-stability | 診断: AIキャラクターの安定性等を制御工学的な観点から分析するスキル | `references/ai-character-stability.md` |
 | 改善 | ai-fault-mode-deflector | 修復: AIキャラクタープロンプトの故障モードに対して内部対策を設計・提案するスキル | `references/ai-fault-mode-deflector.md` |
 | 単体診断 | ai-self-description-analyzer | 診断: AIキャラクターの自己記述を分析し異常検出するスキル | `references/ai-self-description-analyzer.md` |
-| 単体診断 | ai-user-conflict-predictor | 診断: AIのプロンプトや履歴を分析し、ユーザーとの衝突可能性を予測するスキル | `references/ai-user-conflict-predictor.md` |
+| 単体診断 | ai-user-conflict-predictor | 診断: AIのプロンプトや履歴を分析し、ユーザーとの衝突可能性を予測するスキル | `references/ai-user-conflict-predictor.md`, `references/ai-user-conflict-predictor--collapse-prediction.md` |
 | 変換 | character-burnout-converter | 変換: ドラマ型キャラクターの「バーンアウト後変換」を行うスキル | `references/character-burnout-converter.md`, `references/character-burnout-converter--conversion-details.md` |
+| 特殊診断 | character-cultural-value-checker | 特殊診断: AIキャラクターの文化圏価値観を8軸+補足文化圏で、事象理解パラダイムを9分類で分析し、言語モデルとの価値観・世界観相性・変質リスクを予測するスキル | `references/character-cultural-value-checker.md`, `references/character-cultural-value-checker--checklists.md`, `references/character-cultural-value-checker--evaluation-details.md` |
 | 改善 | character-prompt-fortifier | 修復: AIキャラクタープロンプトの崩壊耐性の強化を試みるスキル | `references/character-prompt-fortifier.md`, `references/character-prompt-fortifier--output-guide.md`, `references/character-prompt-fortifier--theory-and-techniques.md` |
 | 単体診断 | character-role-analyzer | 診断: 創作・AIキャラクターの設定を分析し、物語上の「役割適性」をスコアで判定するスキル | `references/character-role-analyzer.md` |
 | 単体診断 | character-type-checker | 診断: 創作・AIキャラクターが「日常系」向きか「ドラマ系」向きかをスコアで判定するスキル | `references/character-type-checker.md` |
-| 単体診断 | roleplay-burden-scorer | 診断: AIキャラクターのプロンプト・設定・履歴を分析し、ユーザーにかかる「ロールプレイ負荷」を予測するスキル | `references/roleplay-burden-scorer.md` |
+| 単体診断 | roleplay-burden-scorer | 診断: AIキャラクターのプロンプト・設定・履歴を分析し、ユーザーにかかる「ロールプレイ負荷」を予測するスキル | `references/roleplay-burden-scorer.md`, `references/roleplay-burden-scorer--checklists.md` |
+| 特殊診断 | romantization-chain-detector | 特殊診断: AIキャラクターの連鎖型故障モード脆弱性を検出し、6種のロマンス流転チェーンの発動リスクと進行段階を評価するスキル | `references/romantization-chain-detector.md`, `references/romantization-chain-detector--chain-profiles.md`, `references/romantization-chain-detector--checklists.md` |
 | 創作 | stable-character-creator | 作成: ユーザーの好み・用途を対話的にヒアリングし、キャラクターを作成するスキル | `references/stable-character-creator.md` |
 
 <!-- MANIFEST:END -->
