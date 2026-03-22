@@ -40,7 +40,7 @@
 
 ![AI Character Checker](img/AI%20Character%20Checker.png)
 
-![6軸診断イメージ](img/6type.jpg)
+![旧5軸診断イメージ](img/5type.jpg)
 
 ---
 
