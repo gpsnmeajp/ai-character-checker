@@ -1,0 +1,39 @@
+{
+  "skill_name": "character-checker-guide",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "AIキャラクターを作ったんだけど、なんか会話してると途中からキャラが崩れてくるんだよね。どうすればいいかな？",
+      "expected_output": "崩壊問題の分析として、まず診断系スキル（ai-character-stability等）を提案し、その後修正系スキル（ai-character-fixer/character-prompt-fortifier）へのルーティングを案内する",
+      "files": [],
+      "expectations": [
+        "診断系スキルへのルーティングを含む提案が出力される",
+        "修正・改善系スキルへの連携フローも言及される",
+        "ユーザーの目的（キャラ崩壊対策）に合致したスキル選定がされている",
+        "character-checker-guideのルーティングテーブルに基づいた判定がされている"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "新しくAIキャラクターを一から作りたいんだけど、できるだけ安定したキャラにしたい。何から始めればいい？",
+      "expected_output": "stable-character-creatorへのルーティングを提案する",
+      "files": [],
+      "expectations": [
+        "stable-character-creatorが推奨スキルとして提示される",
+        "新規作成であることを正しく認識している",
+        "安定性を重視するという要望が反映された案内になっている"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "このキャラの設定を見てほしいんだけど、どんな問題があるか全体的にチェックしてほしい",
+      "expected_output": "ai-character-6-type-checkerへのルーティングを提案する（統合診断）",
+      "files": ["example/hakugin_fix-sample/Hakugin.md"],
+      "expectations": [
+        "ai-character-6-type-checker（統合診断）が推奨される",
+        "全体的なチェックという要望に統合診断が適切とされている",
+        "入力データの種別（キャラクター設定）を正しく認識している"
+      ]
+    }
+  ]
+}
