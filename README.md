@@ -14,7 +14,7 @@
 特に「創作的に面白いが、AIにやらせると危ない」キャラクターの検知に特化しています。  
 システムプロンプトでも、小説文章でも、会話例でも、設定の羅列でも診断可能です。
 
-**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、15のスキルで一貫して扱えます。  
+**診断だけではなく、安全な修正、プロンプトの強化、新規キャラクターの安定設計、キャラクターの物語的変換まで**、17のスキルで一貫して扱えます。  
 診断や修正、作成方法は意図的に一貫していません。場合によって効果の高いものが異なったり、逆効果になるためです。
 
 本スキル群は、日本語、日本サブカル文化を前提として作成しています。
@@ -84,6 +84,7 @@
 | 改善 | AI Character Fixer | 診断結果をもとに安全な修正版プロンプトを生成 | [`skills/ai-character-fixer/SKILL.md`](skills/ai-character-fixer/SKILL.md) |
 | 改善 | AI Fault Mode Deflector | 故障モードをキャラの動機・信念として内側から封じる | [`skills/ai-fault-mode-deflector/SKILL.md`](skills/ai-fault-mode-deflector/SKILL.md) |
 | 改善 | Character Prompt Fortifier | AIキャラクターの崩壊耐性を強化 | [`skills/character-prompt-fortifier/SKILL.md`](skills/character-prompt-fortifier/SKILL.md) |
+| 特殊改善 | General Prompt Fortifier | 汎用プロンプトの崩壊耐性を強化（キャラ無しの汎用版） | [`skills/general-prompt-fortifier/SKILL.md`](skills/general-prompt-fortifier/SKILL.md) |
 | 創作 | Stable Character Creator | 対話でヒアリングしながら安定なAIキャラを新規設計 | [`skills/stable-character-creator/SKILL.md`](skills/stable-character-creator/SKILL.md) |
 | 創作 | Character Burnout Converter | ドラマ系キャラを燃え尽きた日常系キャラに変換 | [`skills/character-burnout-converter/SKILL.md`](skills/character-burnout-converter/SKILL.md) |
 
@@ -158,7 +159,7 @@ character-checker-guideスキルを使って、何をすればいいか教えて
 
 claude.ai はスキルを1度に1つしかインストールできないため、全スキルを1つに統合したスキル。
 
-- 内部に13スキル分のリファレンスを同梱し、状況に応じて自動で参照
+- 内部に15スキル分のリファレンスを同梱し、状況に応じて自動で参照
 - ルーティングロジックも内包（`character-checker-guide` 相当の案内機能も含む）
 - `scripts/merge_all_in_one.py` で各スキルの更新を決定論的に反映可能
 
