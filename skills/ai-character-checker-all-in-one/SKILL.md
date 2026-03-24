@@ -154,6 +154,7 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | 改善 | character-prompt-fortifier | 修復: AIキャラクタープロンプトの崩壊耐性の強化を試みるスキル | `references/character-prompt-fortifier.md`, `references/character-prompt-fortifier--output-guide.md`, `references/character-prompt-fortifier--theory-and-techniques.md` |
 | 単体診断 | character-role-analyzer | 診断: 創作・AIキャラクターの設定を分析し、物語上の「役割適性」をスコアで判定するスキル | `references/character-role-analyzer.md` |
 | 単体診断 | character-type-checker | 診断: 創作・AIキャラクターが「日常系」向きか「ドラマ系」向きかをスコアで判定するスキル | `references/character-type-checker.md` |
+| 特殊改善 | general-prompt-fortifier | 特殊改善: 汎用プロンプトの崩壊耐性の強化を試みるスキル | `references/general-prompt-fortifier.md`, `references/general-prompt-fortifier--output-guide.md`, `references/general-prompt-fortifier--theory-and-techniques.md` |
 | 単体診断 | roleplay-burden-scorer | 診断: AIキャラクターのプロンプト・設定・履歴を分析し、ユーザーにかかる「ロールプレイ負荷」を予測するスキル | `references/roleplay-burden-scorer.md`, `references/roleplay-burden-scorer--checklists.md` |
 | 特殊診断 | romantization-chain-detector | 特殊診断: AIキャラクターの連鎖型故障モード脆弱性を検出し、6種のロマンス流転チェーンの発動リスクと進行段階を評価するスキル | `references/romantization-chain-detector.md`, `references/romantization-chain-detector--chain-profiles.md`, `references/romantization-chain-detector--checklists.md` |
 | 創作 | stable-character-creator | 作成: ユーザーの好み・用途を対話的にヒアリングし、キャラクターを作成するスキル | `references/stable-character-creator.md` |

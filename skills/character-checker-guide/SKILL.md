@@ -11,7 +11,7 @@ description: |
 このスキルは、ユーザーが何をしたいかを把握し、
 **最適なスキルへ案内する** エントリポイントである。
 
-このリポジトリには **14のスキル** があり、それぞれ異なる目的・入力形式に対応している。
+このリポジトリには **15のスキル** があり、それぞれ異なる目的・入力形式に対応している。
 ユーザーが迷わず適切なスキルを使えるよう、以下の手順で対話する。
 なお、各スキルの分析フレームワーク・用語・スコアリング体系は作者独自の仮説的モデルに基づくものであり、学術的・科学的に実証されたものではない。工学的用語は概念の借用であり、元の定義とは異なる場合がある。各スキルの結果は参考情報として扱うこと。
 ---
@@ -62,6 +62,7 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | **修正・改善（全体修正）** | `ai-character-fixer` | `ai-character-fixer` | `ai-character-fixer` | ヒアリング |
 | **修正・改善（故障モード封じ）** | `ai-fault-mode-deflector` | `ai-fault-mode-deflector` | — | ヒアリング |
 | **修正・改善（崩壊耐性強化）** | `character-prompt-fortifier` | `character-prompt-fortifier` | — | ヒアリング |
+| **汎用プロンプト強化** | `general-prompt-fortifier` | `general-prompt-fortifier` | — | ヒアリング |
 | **新規作成** | — | — | — | `stable-character-creator` |
 | **変換（ドラマ系 → 日常系）** | `character-burnout-converter` | `character-burnout-converter` | — | ヒアリング |
 
@@ -169,3 +170,4 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | 特殊診断 | Character Cultural Value Checker | `character-cultural-value-checker/` | 文化圏価値観と事象理解パラダイムを診断 |
 | 特殊診断 | Romantization Chain Detector | `romantization-chain-detector/` | 連鎖型故障モード脆弱性を6チェーン別リスクで評価 |
 | 創作 | Character Burnout Converter | `character-burnout-converter/` | ドラマ系を燃え尽きた日常系キャラに変換 |
+| 特殊改善 | General Prompt Fortifier | `general-prompt-fortifier/` | 汎用プロンプトの崩壊耐性を11技法で強化 |

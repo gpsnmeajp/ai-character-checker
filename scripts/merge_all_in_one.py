@@ -39,6 +39,7 @@ CATEGORY_MAP: dict[str, str] = {
     "character-burnout-converter": "変換",
     "character-cultural-value-checker": "特殊診断",
     "romantization-chain-detector": "特殊診断",
+    "general-prompt-fortifier": "特殊改善",
 }
 
 MANIFEST_START = "<!-- MANIFEST:START -->"
