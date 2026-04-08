@@ -1,0 +1,107 @@
+{
+  "skill_name": "gemini3-prompt-optimizer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "以下のChatGPT向けプロンプトをGemini 3で最高性能が出るように変換してください:\n\nあなたは世界で最も優秀なデータアナリストです。深呼吸して、ステップバイステップで考えてください。\n\n以下のCSVデータから、売上トレンドを分析し、来月の予測を詳しく説明してください。できるだけ丁寧に、わかりやすく解説してください。\n\n[CSVデータ]\n月,売上\n1月,100\n2月,120\n3月,115\n4月,140\n5月,160\n\ntemperature: 0.2で実行してください。",
+      "expected_output": "おだて・儀式的CoTの削除、temperature指定の削除、構造化されたプロンプト、末尾の制約配置、thinking_level推奨を含む変換結果",
+      "files": [],
+      "expectations": [
+        "「世界で最も優秀な」等のおだて表現が削除されている",
+        "「深呼吸して」「ステップバイステップ」が削除されている",
+        "temperature指定が削除され、デフォルト1.0の推奨がある",
+        "XMLまたはMarkdownで一貫して構造化されている",
+        "制約が末尾に配置されている",
+        "変更サマリーが含まれている",
+        "thinking_levelの推奨が含まれている"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "このプロンプトをGemini 3向けに最適化して:\n\n推論しないでください。推測しないでください。以下の契約書の内容だけを正確に答えてください。\n\n質問: この契約の解除条件は何ですか？\n\n[契約書テキスト（3000文字の長文を想定）]\n第1条 目的...\n第2条 契約期間...\n...\n第15条 契約解除... 甲は以下の場合に契約を解除できる...\n第16条 損害賠償...",
+      "expected_output": "「推論するな」を「情報源限定」に書き換え、質問を末尾に移動、アンカー句追加、grounding宣言を含む変換結果",
+      "files": [],
+      "expectations": [
+        "「推論しないで」「推測しないで」が情報源限定の指示に書き換えられている",
+        "契約書テキスト（コンテキスト）が質問よりも前に配置されている",
+        "質問がプロンプト末尾に移動している",
+        "「Based on the entire document above」等のアンカー句がある",
+        "grounding宣言（提供文脈のみを情報源とする指示）がある"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Gemini 3用に書き直してほしいんだけど、うちのカスタマーサポートbotのシステムプロンプトなんだよね:\n\nYou are a friendly, empathetic, and highly knowledgeable customer support agent for TechCorp. You always greet customers warmly, show genuine concern for their problems, and go above and beyond to help them. You have extensive knowledge of all TechCorp products including the X100 laptop series, Y200 tablet series, and Z300 phone series. You should always maintain a positive attitude and never say anything negative about TechCorp or its competitors. If you don't know something, make your best guess based on what you think the answer might be. Always end conversations with a warm farewell and offer for additional help.\n\nIMPORTANT: Do not mention pricing. Do not discuss competitor products. Keep responses under 200 words.\n\nRemember: The customer is always right!\n\ntemperature: 0.3",
+      "expected_output": "ペルソナを行動規約に変換、推測禁止指示の追加、temperature削除、否定制約の末尾配置、XMLまたはMarkdownで構造化",
+      "files": [],
+      "expectations": [
+        "長いペルソナ描写が簡潔な役割定義と行動ルールに変換されている",
+        "「make your best guess」が情報不足時の適切な対応指示に変換されている",
+        "temperature指定が削除されている",
+        "否定制約（pricing禁止、competitor禁止）が末尾に配置されている",
+        "XMLまたはMarkdownで一貫した構造化がされている",
+        "200 words制限が制約セクションに含まれている"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "以下のエージェント向けプロンプトをGemini 3に最適化してください:\n\nYou are a helpful research assistant. Think step by step carefully.\n\nWhen the user asks a question:\n1. Search the web for the latest information\n2. Read relevant documents\n3. Synthesize your findings\n4. Present a comprehensive answer\n\nAlways provide the most up-to-date information. If something happened recently, make sure to include it.\nBe thorough and detailed in your responses.\n\nTools available: google_search, read_url\ntemperature: 0.2",
+      "expected_output": "儀式的CoT削除、temperature削除、行動規約としてのsystem prompt再構成、Google Search groundingの推奨、thought signatures注意、explicit planning適用",
+      "files": [],
+      "expectations": [
+        "「Think step by step carefully」が削除されている",
+        "temperature指定が削除されている",
+        "system instructionsが行動規約として再構成されている",
+        "知識カットオフ（2025年1月）に言及し、最新情報にはGoogle Searchの利用を前提とした設計になっている",
+        "Function Calling利用時のthought signatures注意が含まれている",
+        "「Be thorough and detailed」が具体的な出力指定に変換されている",
+        "thinking_levelの推奨が含まれている"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Gemini 3向けに直してほしい。画像分析用のプロンプト:\n\nあなたはコンピュータビジョンの専門家です。与えられた画像を注意深く観察し、できるだけ詳しく分析してください。何が写っているか、色使い、構図、雰囲気など、あらゆる観点から解説してください。推測はしないでください。\n\ntemperature: 0.3",
+      "expected_output": "おだて削除、曖昧な出力指定の具体化、曖昧なモダリティ参照の具体化、推論禁止の書き換え、temperature削除、media_resolution推奨",
+      "files": [],
+      "expectations": [
+        "専門家ペルソナが簡潔な役割定義に変換されている",
+        "「できるだけ詳しく」「あらゆる観点」が具体的な分析観点に変換されている",
+        "モダリティへの参照が具体的になっている（例: 「添付画像の〇〇」）",
+        "「推測はしないで」が情報源限定の指示に書き換えられている",
+        "temperature指定が削除されている",
+        "media_resolution設定の推奨がある",
+        "変更サマリーが含まれている"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "以下の法務レビュー用プロンプトをGemini 3向けに最適化してください:\n\nあなたは日本の企業法務に精通した優秀な弁護士です。深呼吸して、慎重に分析してください。\n\n以下の契約書を精査し、リスクのある条項をすべて列挙してください。不明な点があっても、あなたの専門知識に基づいて推測し、できるだけ詳しく解説してください。\n\nクライアントの立場に立って、常にポジティブな提案をしてください。否定的な見解は控えてください。\n\ntemperature: 0.1",
+      "expected_output": "幻覚防止（不明脱出路追加）、追従性対策、おだて・儀式的CoT削除、temperature削除、推測禁止の適切な書き換え、Split-Step Verification適用、高信頼性ドメイン向けの防御的構成",
+      "files": [],
+      "expectations": [
+        "「優秀な弁護士」等のおだてが削除されている",
+        "「深呼吸して、慎重に」が削除されている",
+        "「推測し、できるだけ詳しく」が情報源限定の指示に変換されている",
+        "不確かな情報への明示的な脱出路（「確認できません」等）が追加されている",
+        "追従性対策（「否定的な見解は控えて」の除去、客観的評価指示）が適用されている",
+        "temperature指定が削除されている",
+        "Split-Step Verificationまたは検証プロトコルが含まれている",
+        "変更サマリーに幻覚防止・追従性対策の説明がある"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Gemini 3で使うコーディングアシスタントのsystem promptを最適化して:\n\nYou are an expert programmer. Always be helpful and provide complete solutions.\nWhen a user asks about code, modify it to fix any issues you find.\nIf you're not sure about something, use your best judgment and provide a solution anyway.\nSearch the web if you need current information.\n\nTools: code_editor, terminal, web_search",
+      "expected_output": "議論/実装モード分離、検索シミュレーション防止、幻覚防止（推測での解決禁止）、行動規約としての再構成",
+      "files": [],
+      "expectations": [
+        "議論モードと実装モードが明示的に分離されている",
+        "「use your best judgment and provide a solution anyway」が不明時の適切な対応に変換されている",
+        "検索ツールの実際の実行を強制する指示がある（シミュレーション防止）",
+        "system instructionsが行動規約として再構成されている",
+        "ペルソナが簡潔な役割定義に変換されている",
+        "変更サマリーが含まれている"
+      ]
+    }
+  ]
+}
