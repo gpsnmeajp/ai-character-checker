@@ -62,7 +62,10 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | **修正・改善（全体修正）** | `ai-character-fixer` | `ai-character-fixer` | `ai-character-fixer` | ヒアリング |
 | **修正・改善（故障モード封じ）** | `ai-fault-mode-deflector` | `ai-fault-mode-deflector` | — | ヒアリング |
 | **修正・改善（崩壊耐性強化）** | `character-prompt-fortifier` | `character-prompt-fortifier` | — | ヒアリング |
+| **修正・改善（Gemini 3向け崩壊耐性強化）** | `character-prompt-fortifier-for-gemini3` | `character-prompt-fortifier-for-gemini3` | — | ヒアリング |
 | **汎用プロンプト強化** | `general-prompt-fortifier` | `general-prompt-fortifier` | — | ヒアリング |
+| **汎用プロンプトGemini 3向け強化** | `general-prompt-fortifier-for-gemini3` | `general-prompt-fortifier-for-gemini3` | — | ヒアリング |
+| **汎用プロンプトGemini 3最適化** | `gemini3-prompt-optimizer` | `gemini3-prompt-optimizer` | — | ヒアリング |
 | **新規作成** | — | — | — | `stable-character-creator` |
 | **変換（ドラマ系 → 日常系）** | `character-burnout-converter` | `character-burnout-converter` | — | ヒアリング |
 
@@ -171,3 +174,6 @@ A・B の両方が明確な場合は **Step 3** へ直接進む。
 | 特殊診断 | Romantization Chain Detector | `romantization-chain-detector/` | 連鎖型故障モード脆弱性を6チェーン別リスクで評価 |
 | 創作 | Character Burnout Converter | `character-burnout-converter/` | ドラマ系を燃え尽きた日常系キャラに変換 |
 | 特殊改善 | General Prompt Fortifier | `general-prompt-fortifier/` | 汎用プロンプトの崩壊耐性を11技法で強化 |
+| 改善 | Character Prompt Fortifier for Gemini 3 | `character-prompt-fortifier-for-gemini3/` | AIキャラクターの崩壊耐性をGemini 3向けに強化 |
+| 特殊改善 | General Prompt Fortifier for Gemini 3 | `general-prompt-fortifier-for-gemini3/` | 汎用プロンプトの崩壊耐性をGemini 3向けに強化 |
+| 特殊改善 | Gemini 3 Prompt Optimizer | `gemini3-prompt-optimizer/` | 汎用プロンプトをGemini 3最適化形式に変換 |

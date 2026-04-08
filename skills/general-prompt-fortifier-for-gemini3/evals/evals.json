@@ -1,0 +1,50 @@
+{
+  "skill_name": "general-prompt-fortifier",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "以下の感情分析プロンプトを強化してほしい。小規模モデルから推論モデルまで安定して動くようにしたい。\n\n```\nあなたはテキストの感情分析を行うシステムです。\n入力されたテキストを「ポジティブ」「ネガティブ」「ニュートラル」のいずれかに分類してください。\n分類結果はJSON形式で出力してください。\n個人情報には触れないでください。\n```",
+      "expected_output": "11技法を適用した一人称自述形式の強化済みプロンプト。XMLセクション＋Markdown構造、理由付き制約の内在化、入出力例を含む完成品が出力される",
+      "files": [],
+      "expectations": [
+        "出力プロンプトが一人称自述形式（「私は〜」）で記述されている",
+        "プロンプト名ヘッダーが先頭に存在する",
+        "XMLタグ（prompt_identity, boundaries, io_examples等）で構造化されている",
+        "禁止事項（個人情報に触れない）が理由付きで内在化されている",
+        "入出力例（few-shot）が最低3つ含まれている",
+        "元のプロンプトの機能（3カテゴリへの分類、JSON出力）が維持されている",
+        "変換サマリーテーブルが出力に含まれている"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "うちのチームで使ってるコードレビュー用のプロンプトなんだけど、モデルを変えるとレビュー品質がバラバラになるので安定させたい。強化して。\n\n```\nYou are a code reviewer. Review the submitted code for:\n1. Bugs and logic errors\n2. Security vulnerabilities (OWASP Top 10)\n3. Performance issues\n4. Code style and readability\n\nFor each issue found, provide:\n- Severity: Critical / Major / Minor\n- Location: file and line number\n- Description of the issue\n- Suggested fix\n\nDo not modify the code directly. Do not make assumptions about business logic.\nIf the code is too large, focus on the most critical files first.\nOutput in Markdown table format.\n```",
+      "expected_output": "一人称自述形式に変換された強化済みコードレビュープロンプト。4つのレビュー観点、Severity分類、Markdown出力形式が維持され、制約が内在化された完成品",
+      "files": [],
+      "expectations": [
+        "出力プロンプトが一人称自述形式で記述されている",
+        "4つのレビュー観点（Bugs, Security, Performance, Style）が維持されている",
+        "Severity分類（Critical/Major/Minor）が維持されている",
+        "制約（コード直接変更禁止、ビジネスロジック仮定禁止）が理由付きで内在化されている",
+        "入出力例にエラーケース（コードが大きすぎる場合等）が含まれている",
+        "動作モード分離（タスク遂行/エラー処理/対話的支援）が設計されている",
+        "自己監視・フォールバック機構が含まれている"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "議事録を自動要約するツールのプロンプトを作りたいんだけど、まだ何も書いてない。コンセプトだけ説明するから、最初から強化形式で作ってほしい。\n\n概要: 会議の議事録（テキスト）を受け取って、以下を抽出・要約するツール\n- 決定事項のリスト\n- アクションアイテム（担当者・期限付き）\n- 未解決の議題\n- 次回会議への引き継ぎ事項\n\n出力はMarkdown形式。日本語で出力。長い議事録でも漏れなく対応したい。",
+      "expected_output": "コンセプトから新規構成された強化済みプロンプト。議事録要約の4つの抽出項目が一人称自述で設計され、入出力例・自己監視機構を含む完成品",
+      "files": [],
+      "expectations": [
+        "出力プロンプトが一人称自述形式で記述されている",
+        "4つの抽出項目（決定事項・アクションアイテム・未解決議題・引き継ぎ）が仕様に含まれている",
+        "出力仕様でMarkdown形式・日本語出力が明記されている",
+        "入出力例が最低3つ含まれ、うち1つは長文入力または曖昧な入力のケースである",
+        "XMLセクション構造で整理されている",
+        "不足情報についてヒアリングまたは想定の説明がある",
+        "変換サマリーまたは設計サマリーが出力に含まれている"
+      ]
+    }
+  ]
+}

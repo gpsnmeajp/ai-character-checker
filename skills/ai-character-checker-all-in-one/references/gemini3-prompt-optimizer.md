@@ -61,7 +61,7 @@ Gemini 3のプロンプト設計は3つの柱に集約される:
 
 ### Step 3: Gemini 3最適化の適用
 
-分析結果に基づき、以下のテクニックを適切に適用する。詳細は `references/conversion-rules.md` を参照。
+分析結果に基づき、以下のテクニックを適切に適用する。詳細は `references/gemini3-prompt-optimizer--conversion-rules.md` を参照。
 
 #### 3.1 構造化
 - XMLタグ(`<role>`, `<context>`, `<task>`, `<constraints>`, `<output_format>`)またはMarkdown見出し(**混在禁止**)でセクションを分離
@@ -153,8 +153,8 @@ Gemini 3のプロンプト設計は3つの柱に集約される:
 
 詳細な変換ルール、アンチパターン辞典、用途別テンプレートは以下を参照:
 
-- `references/conversion-rules.md` — 変換ルールの詳細解説と判断基準
-- `references/anti-patterns.md` — 検出すべきアンチパターンの網羅的リスト（with 変換前/後の例）。Gemini 3特有の幻覚・追従性・検索シミュレーション問題への対策パターンも含む
-- `references/templates.md` — 用途別の最適化済みテンプレート集。高信頼性ドメイン向け防御的テンプレートも含む
+- `references/gemini3-prompt-optimizer--conversion-rules.md` — 変換ルールの詳細解説と判断基準
+- `references/gemini3-prompt-optimizer--anti-patterns.md` — 検出すべきアンチパターンの網羅的リスト（with 変換前/後の例）。Gemini 3特有の幻覚・追従性・検索シミュレーション問題への対策パターンも含む
+- `references/gemini3-prompt-optimizer--templates.md` — 用途別の最適化済みテンプレート集。高信頼性ドメイン向け防御的テンプレートも含む
 
 変換に迷った場合や、特定のユースケースでの最適な構成を確認したい場合にこれらを読む。

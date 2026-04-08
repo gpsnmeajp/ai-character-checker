@@ -35,11 +35,14 @@ CATEGORY_MAP: dict[str, str] = {
     "ai-character-fixer": "改善",
     "ai-fault-mode-deflector": "改善",
     "character-prompt-fortifier": "改善",
+    "character-prompt-fortifier-for-gemini3": "改善",
     "stable-character-creator": "創作",
     "character-burnout-converter": "変換",
     "character-cultural-value-checker": "特殊診断",
     "romantization-chain-detector": "特殊診断",
     "general-prompt-fortifier": "特殊改善",
+    "general-prompt-fortifier-for-gemini3": "特殊改善",
+    "gemini3-prompt-optimizer": "特殊改善",
 }
 
 MANIFEST_START = "<!-- MANIFEST:START -->"

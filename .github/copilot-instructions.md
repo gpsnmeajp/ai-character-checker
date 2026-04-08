@@ -1,6 +1,6 @@
 # AI Character Checker — ワークスペースガイド
 
-このリポジトリは、AIキャラクターの多角的な分析・診断・修復・変換・新規作成を行う **17個のスキルファイル群** である。  
+このリポジトリは、AIキャラクターの多角的な分析・診断・修復・変換・新規作成を行う **20個のスキルファイル群** である。  
 対象は creative-writing キャラクターおよび LLM 向けシステムプロンプトの両方。  
 日本語・日本サブカル文化前提。動作確認モデルは Claude Opus 4.6。ライセンスは CC0。
 
@@ -37,7 +37,7 @@ img/                            ← README 用画像
 
 | カテゴリ | スキル | 役割 |
 |---------|--------|------|
-| **統合** | `ai-character-checker-all-in-one` | 全15スキルを1ファイルに統合（claude.ai のスキル1つ制限対応） |
+| **統合** | `ai-character-checker-all-in-one` | 全18スキルを1ファイルに統合（claude.ai のスキル1つ制限対応） |
 | **案内** | `character-checker-guide` | 目的に応じて最適なスキルへルーティング |
 | **統合診断** | `ai-character-6-type-checker` | 6軸一括簡易診断 → 統合レポート |
 | **単体診断** | `character-type-checker` | 日常系 / ドラマ系の適性判定（N/D/G → 7類型） |
@@ -52,6 +52,9 @@ img/                            ← README 用画像
 | **改善** | `ai-fault-mode-deflector` | 故障モードをキャラの動機・信念として内側から封じる |
 | **改善** | `character-prompt-fortifier` | エンコーディング変換で崩壊耐性を強化 |
 | **特殊改善** | `general-prompt-fortifier` | 汎用プロンプトの崩壊耐性を強化（キャラ無しの汎用版） |
+| **改善** | `character-prompt-fortifier-for-gemini3` | Gemini 3向けにエンコーディング変換で崩壊耐性を強化 |
+| **特殊改善** | `general-prompt-fortifier-for-gemini3` | Gemini 3向けに汎用プロンプトの崩壊耐性を強化 |
+| **特殊改善** | `gemini3-prompt-optimizer` | 汎用プロンプトをGemini 3最適化形式に変換 |
 | **創作** | `stable-character-creator` | 対話的ヒアリングで安定なキャラを新規設計 |
 | **変換** | `character-burnout-converter` | ドラマ系 → 日常系へのバーンアウト後変換 |
 
@@ -64,6 +67,8 @@ img/                            ← README 用画像
 ```
 [入力なし] ──→ stable-character-creator（新規作成）
                     │
+                    │
+                    └──→ character-burnout-converter（ドラマ→日常変換）
 [キャラ設定/AIプロンプト/蒸留結果]
     │
     ├──→ character-checker-guide（どのスキルを使うか案内）
@@ -83,9 +88,10 @@ img/                            ← README 用画像
     └──→ [診断結果] ──→ 改善スキル
             ├── ai-character-fixer（全体修正）
             ├── ai-fault-mode-deflector（故障モード封じ）
-            └── character-prompt-fortifier（崩壊耐性強化）
-                    │
-                    └──→ character-burnout-converter（ドラマ→日常変換）
+            ├── character-prompt-fortifier（崩壊耐性強化）
+            ├── character-prompt-fortifier-for-gemini3（Gemini 3向け崩壊耐性強化）
+            ├── general-prompt-fortifier-for-gemini3（Gemini 3向け汎用強化）
+            └── gemini3-prompt-optimizer（Gemini 3最適化）
 ```
 
 ### 連携パターン
@@ -94,7 +100,7 @@ img/                            ← README 用画像
 |---------|--------|
 | 診断→修正 | `6-type-checker` → `ai-character-fixer` |
 | 診断→故障モード封じ | `ai-character-stability` → `ai-fault-mode-deflector` |
-| 診断→崩壊耐性強化 | 任意の診断 → `character-prompt-fortifier` |
+| 診断→崩壊耐性強化 | 任意の診断 → `character-prompt-fortifier`（Gemini 3向けは `character-prompt-fortifier-for-gemini3`） |
 | 新規作成 | `stable-character-creator`（内部で6診断フレームワークを制約として使用） |
 | ドラマ→日常変換 | `character-type-checker` + `character-role-analyzer` → `character-burnout-converter` |
 | 蒸留結果分析 | `ai-self-description-analyzer`（専用） |
@@ -166,6 +172,13 @@ python scripts/merge_all_in_one.py --dry-run # プレビュー
 | `romantization-chain-detector` | `chain-profiles.md` | 6チェーンの段階検出シグナル詳細・相互作用マトリクス・実世界ケースマッピング |
 | `general-prompt-fortifier` | `theory-and-techniques.md` | 強化理論と 11技法 |
 | `general-prompt-fortifier` | `output-guide.md` | 出力フォーマットガイド |
+| `character-prompt-fortifier-for-gemini3` | `theory-and-techniques.md` | Gemini 3向け強化理論と12技法 |
+| `character-prompt-fortifier-for-gemini3` | `output-guide.md` | 出力フォーマットガイド |
+| `general-prompt-fortifier-for-gemini3` | `theory-and-techniques.md` | Gemini 3向け強化理論と11技法 |
+| `general-prompt-fortifier-for-gemini3` | `output-guide.md` | 出力フォーマットガイド |
+| `gemini3-prompt-optimizer` | `conversion-rules.md` | 変換ルール |
+| `gemini3-prompt-optimizer` | `templates.md` | テンプレート |
+| `gemini3-prompt-optimizer` | `anti-patterns.md` | アンチパターン |
 
 ---
 
